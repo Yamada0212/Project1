@@ -25,31 +25,30 @@ int main()
 	cout << "あなたのBMIは" << fixed << setprecision(1) << bmi << "になります。" << endl;
 	cout << "あなたの標準体重は" << stdWeight << "kgになります。" << endl;
 
-	if(bmi<18.5)
+    if (bmi>=40)
 	{
-		cout << "あなたは低体重です。";
+	cout << "あなたは肥満(4)です。";
 	}
-	else if (18.5<=bmi< 25.0) 
-	{
-		cout << "あなたは標準体重です。";
-	}
-	else if (25<=bmi<30) 
-	{
-		cout<<"あなたは肥満(1)です。";
-	}
-	else if (30<=bmi<35)
-	{
-		cout << "あなたは肥満(2)です。";
-	}
-	else if (35 <= bmi < 40)
+	else if (bmi>=35)
 	{
 		cout << "あなたは肥満(3)です。";
 	}
-	else if (40 <= bmi < 45)
+	else if (bmi>=30)
 	{
-		cout << "あなたは肥満(4)です。";
+		cout << "あなたは肥満(2)です。";
 	}
-
+	else if (bmi>=25) 
+	{
+		cout<<"あなたは肥満(1)です。";
+	}
+	else if (bmi>=18.5)
+	{
+		cout << "あなたは標準体重です。";
+	}
+	else
+	{
+		cout << "あなたは低体重です。";
+	}
 
 	return 0;
 }
